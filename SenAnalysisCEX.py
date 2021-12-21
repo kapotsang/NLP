@@ -25,7 +25,7 @@ stringComment1 = nlp(stringComment)
 
 token_list = []
 for token in stringComment1:
-    token_list.append(token.text)
+    token_list.append(token.lemma_)
 
 stopwordFiltered = []
 
@@ -33,6 +33,8 @@ for words in token_list:
     lexeme = nlp.vocab[words]
     if lexeme.is_stop == False:
         stopwordFiltered.append(words)
+
+
 
 noPunc = []
 for word1 in stopwordFiltered:
@@ -80,7 +82,7 @@ for word in set2List:
 
 print(one)
 print(two)
-print(set1List)
+print(set1List[4])
 
 
 
